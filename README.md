@@ -20,6 +20,12 @@
 ## commands
 -   Starting:
     ```
+    sudo docker compose up --build
+    ```
+
+## archive commands
+-   Starting:
+    ```
     docker compose up -d
     ```
 -   Shutdown:
