@@ -24,5 +24,9 @@ services:
       - GF_SECURITY_ADMIN_USER=administrator
       - GF_SECURITY_ADMIN_PASSWORD=clearpath
       - GF_USERS_DEFAULT_THEME=light
+  air_velocity_subscriber:
+      build:
+          dockerfile: Dockerfile
+      command: ros2 launch air_velocity_measurement air_velocity_measurement_launch.py
 volumes:
   prom_data:
