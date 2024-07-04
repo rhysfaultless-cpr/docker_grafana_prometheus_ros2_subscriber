@@ -16,11 +16,12 @@
     ```
 5.  Build the workspace with `colcon build`
 6.  Launch the ROS 2 node with _TODO_
+7.  Give permissions with `sudo chmod +x ros_entrypoint.sh`
 
 ## commands
 -   Starting:
     ```
-    sudo docker compose up --build
+    docker compose up --build
     ```
 
 ## archive commands
