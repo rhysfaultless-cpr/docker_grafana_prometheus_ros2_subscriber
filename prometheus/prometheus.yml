@@ -19,4 +19,4 @@ scrape_configs:
   static_configs:
   - targets:
     - localhost:9090
-    - 192.168.131.1:8001
+    - 192.168.131.1:8001 # default IP address for the main computer in Clearpath Robotics products
