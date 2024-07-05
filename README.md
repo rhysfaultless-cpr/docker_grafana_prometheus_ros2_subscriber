@@ -13,24 +13,21 @@
 3.  In terminal, navigate to the local reopsitory directory.
 4.  Run:
     ```
-    docker compose up -d
+    docker compose up --build
     ```
-5.  Build the workspace with `colcon build`
-6.  Launch the ROS 2 node with _TODO_
-7.  Give permissions with `sudo chmod +x ros_entrypoint.sh`
+5.  Start the relevant ROS 2 packages with the typical ROS 2 native build and launch procedure.
+    Note that this repository's prometheus setup is listening to port 8001.
 
 ## commands
 -   Starting:
     ```
     docker compose up --build
     ```
-
-## archive commands
--   Starting:
+-   Starting, detached:
     ```
-    docker compose up -d
+    docker compose up --build -d
     ```
--   Shutdown:
+-   Shutdown, detached:
     ```
     docker compose down
     ```
