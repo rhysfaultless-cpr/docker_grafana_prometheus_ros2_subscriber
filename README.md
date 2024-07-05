@@ -22,19 +22,21 @@
 3.  In terminal, navigate to the local reopsitory directory.
 4.  Run:
     ```
-    docker compose up --build
+    docker compose up
     ```
 5.  Start the relevant ROS 2 packages with the typical ROS 2 native build and launch procedure.
-    Note that this repository's prometheus setup is listening to port 8001.
+    Note that this repository's prometheus.yml has these default configuration settings:
+    -   Is targeting to port 8001. This port was chosen to match the repository _prometheus_and_ros2_subscriber's_ line `start_http_server(8001)`.
+    -   Is targeting the IP address `192.168.131.1`. This is the default IP address for the main computer for Clearpath Robotics products.
 
 ## commands
 -   Starting:
     ```
-    docker compose up --build
+    docker compose up
     ```
 -   Starting, detached:
     ```
-    docker compose up --build -d
+    docker compose up -d
     ```
 -   Shutdown, detached:
     ```
