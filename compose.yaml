@@ -10,7 +10,6 @@ services:
     volumes:
       - ./prometheus:/etc/prometheus
       - prom_data:/prometheus
-    network_mode: "host"
   grafana:
     image: grafana/grafana
     container_name: grafana
