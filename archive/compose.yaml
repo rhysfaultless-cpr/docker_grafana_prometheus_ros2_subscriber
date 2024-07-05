@@ -10,7 +10,6 @@ services:
     volumes:
       - ./prometheus:/etc/prometheus
       - prom_data:/prometheus
-    network_mode: "host"
   grafana:
     image: grafana/grafana
     container_name: grafana
@@ -25,5 +24,12 @@ services:
       - GF_SECURITY_ADMIN_USER=administrator
       - GF_SECURITY_ADMIN_PASSWORD=clearpath
       - GF_USERS_DEFAULT_THEME=light
+  air_velocity_subscriber:
+      build:
+          context: ./
+          dockerfile: Dockerfile
+      command: ros2 launch subscribe_and_push subscribe_and_push_launch.py
+      ports:
+        - 8001:8001
 volumes:
   prom_data:
